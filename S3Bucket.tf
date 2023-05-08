@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "example" {
-  bucket = "jat-jat-my-tf-test-bucket"
+  bucket = "jat1-jat-my-tf-test-bucket"
 
   tags = {
     Name        = "My bucket"
