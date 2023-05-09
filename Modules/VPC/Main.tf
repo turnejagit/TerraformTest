@@ -18,7 +18,7 @@ resource "aws_subnet" "private-subnet-1" {
     cidr_block = "10.10.0.0/24"
     # map_public_ip_on_launch = “true” //it makes this a public subnet
     availability_zone = "us-east-1a"
-    tags {
+    tags = {
         Name = "private subnet 1"
     }
 }
