@@ -22,3 +22,13 @@ resource "aws_subnet" "private-subnet-1" {
         Name = "private subnet 1"
     }
 }
+
+resource "aws_vpc_dhcp_options" "ecat-Default-DHCP-Option-Set" {
+  domain_name          = "ue2.na.aws.cat.com"
+  domain_name_servers  = ["AmazonProvidedDNS"]
+  ntp_servers          = ["169.24.169.123"]
+
+  tags = {
+    Name = "ecat-Default-DHCP-Option-Set"
+  }
+}
