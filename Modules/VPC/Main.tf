@@ -32,3 +32,8 @@ resource "aws_vpc_dhcp_options" "ecat-Default-DHCP-Option-Set" {
     Name = "ecat-Default-DHCP-Option-Set"
   }
 }
+
+resource "aws_vpc_dhcp_options_association" "dns_resolver" {
+  vpc_id          = aws_vpc.Terraform.id
+  dhcp_options_id = aws_vpc_dhcp_options.ecat-Default-DHCP-Option-Set.id
+}
