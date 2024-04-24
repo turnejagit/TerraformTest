@@ -5,5 +5,5 @@ provider "aws" {
 
 module "S3test" {
 source = "git::https://@github.com/turnejagit/TerraformTest//Modules/S3test"
-bucket_prefix = "jat-test-module-bucket"
+s3-bucket-name = "jat-test-module-bucket"
 }
