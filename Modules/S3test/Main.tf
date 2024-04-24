@@ -1,4 +1,4 @@
 resource "aws_s3_bucket" "S3test" {
-  bucket = "${var.s3-bucket-name}"
+  bucket = "${var.bucket_name}"
   acl    = "private"
 }
