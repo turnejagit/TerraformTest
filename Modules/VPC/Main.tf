@@ -23,6 +23,16 @@ resource "aws_subnet" "private-subnet-1" {
     }
 }
 
+resource "aws_subnet" "private-subnet-2" {
+    vpc_id = "${aws_vpc.Terraform.id}"
+    cidr_block = "10.10.1.0/24"
+    # map_public_ip_on_launch = “true” //it makes this a public subnet
+    availability_zone = "us-east-1b"
+    tags = {
+        Name = "private subnet 2"
+    }
+}
+
 resource "aws_vpc_dhcp_options" "ecat-Default-DHCP-Option-Set" {
   domain_name          = "ue2.na.aws.cat.com"
   domain_name_servers  = ["AmazonProvidedDNS"]
