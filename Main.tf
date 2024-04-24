@@ -10,3 +10,7 @@ module "VPC" {
 source = "git::https://@github.com/turnejagit/TerraformTest//Modules/VPC"
 }
 
+module "Bucket2" {
+source = "git::https://@github.com/turnejagit/TerraformTest//Modules/S3test"
+bucket_name = "jat-test-module-bucket"
+}
