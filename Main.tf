@@ -1,6 +1,7 @@
 provider "aws" {
-  region = "us-east-2"
+  region = "us-east-1"
 }
+
 module "S3" {
 source = "git::https://@github.com/turnejagit/TerraformTest//Modules/S3"
 }
