@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 
-module "s3" {
-  source = "Modules/S3test/bucket.tf"
-  bucket_name = "jats-module-bucket01"
-}
+module s3_bucket {
+  source = "Modules/S3test"
+  bucket_prefix = "jat-test-module-bucket"
+ }
